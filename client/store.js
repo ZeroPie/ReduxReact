@@ -1,10 +1,12 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, compose } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router'
-import rootReducer from './reducers/index';
+
+
+import rootReducer from './reducers/index'
+
 import comments from './data/comments';
 import posts from './data/posts';
-
 /*
   Store
 
@@ -14,15 +16,11 @@ import posts from './data/posts';
 */
 
 const defaultState = {
-  posts,
+  posts, // posts: posts, ES6 doesnt need this if key and prop are equal
   comments
 };
 
-const enhancers = compose(
-  window.devToolsExtension ? window.devToolsExtension() : f => f
-);
-
-const store = createStore(rootReducer, defaultState, enhancers);
+const store = createStore(rootReducer, defaultState);
 
 // we export history because we need it in `reduxstagram.js` to feed into <Router>
 export const history = syncHistoryWithStore(browserHistory, store);

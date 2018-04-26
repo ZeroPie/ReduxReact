@@ -12,10 +12,10 @@
 
 */
 
-export function increment(i) {
+export function increment(index) {
   return {
     type: 'INCREMENT_LIKES',
-    index: i
+    index // ES5 would be index: index 
   };
 }
 
@@ -32,10 +32,10 @@ export function addComment(postId, author, comment) {
   };
 }
 
-export function removeComment(postId, i){
+export function removeComment(postId, index){
   return {
     type: 'REMOVE_COMMENT',
-    i,
+    index,
     postId
   };
 }

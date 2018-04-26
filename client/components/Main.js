@@ -8,10 +8,9 @@ const Main = React.createClass({
     return (
       <div>
         <h1>
-          <Link to="/">Reduxstagram</Link>
+          <Link to="/">Redux Ftw</Link>
         </h1>
-        {/* We use cloneElement here so we can auto pass down props */}
-        { React.cloneElement(this.props.children, this.props) }
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     );
   }

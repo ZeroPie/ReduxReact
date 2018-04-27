@@ -5,10 +5,6 @@ export function increment(index) {
   };
 }
 
-/*
-  Comments
-*/
-
 export function addComment(postId, author, comment) {
   return {
     type: 'ADD_COMMENT',

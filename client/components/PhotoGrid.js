@@ -1,4 +1,5 @@
 import React from 'react';
+import Photo from './Photo'
 
 const PhotoGrid = React.createClass({
 
@@ -6,7 +7,7 @@ const PhotoGrid = React.createClass({
     // Then we go ahead and return some JSX
     return (
       <div className="photo-grid">
-        I'm the photo grid
+         im the photo grid
       </div>
     );
   }

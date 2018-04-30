@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Header from './Header';
 
 const Main = React.createClass({
-
   render() {
     // Then we go ahead and return some JSX
     return (
       <div>
-        <h1>
-          <Link to="/">React Redux</Link>
-        </h1>
+        <Header />
         {React.cloneElement(this.props.children, this.props)}
       </div>
     );

@@ -14,8 +14,6 @@ const Comments = React.createClass({
   },
 
   render() {
-
-
     return (
       <div className="comments">
         {this.props.postComments.map(this.renderComment)}
